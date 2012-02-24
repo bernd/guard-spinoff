@@ -31,9 +31,9 @@ module Guard
 
       def run_all
         if rspec?
-          run('spec')
+          run(options[:test_paths] || 'spec')
         elsif test_unit?
-          run('test')
+          run(options[:test_paths] || 'test')
         end
       end
 
